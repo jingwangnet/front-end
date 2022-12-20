@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;400;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Chivo Mono', monospace;
+}
+
+body {
+  display: flex;
+  height: 100vh; 
+  align-items: center;
+}
+.wrap {
+  width: 100%;
+  display: flex;
+
+  .item{
+    width: 25%;
+    position: relative;
+    img {
+      width: 100%;
+      vertical-align: middle;
+    }
+    .txt {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 20px;
+      background-color: rgba(0,0,0,.6);
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      opacity: 0;
+      transition: opacity .5s;
+
+      &:hover {
+        opacity: 1;
+
+        h2:after {
+          width: 100%;
+        }
+      }
+
+      h2 {
+        font-size: 36px;
+        color: #ff0;
+        font-weight: 400;
+
+        &:after{
+          content: '';
+          display: block;
+          width: 0%;
+          height: 2px;
+          margin: 10px 0;
+          background-color: #ff0;
+          transition: width .5s .5s;
+        }
+
+      }
+
+
+      p {
+        font-size: 20px;
+        color: #fff;
+        font-weight: 100;
+      }
+    }
+  }
+}
