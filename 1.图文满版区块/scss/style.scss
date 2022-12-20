@@ -1,3 +1,4 @@
+@import "mixins";
 * {
   margin: 0;
   padding: 0;
@@ -5,45 +6,109 @@
 }
 
 .banner {
-  width: 100%;
-  height: 100vh;
-  background: 
-      linear-gradient(115deg, #7bf 50%, transparent 50%) center center / 100% 100%,
-      url("https://picsum.photos/1200/600?random=10") right center / auto 100%;
+    width: 100%;
+    height: 100vh;
+    background: url("https://picsum.photos/1200/600?random=10") center center / auto 100%;
 
-
-  .container {
-    height: 100%;
-    width: auto;
-    max-width: 1200px;
-    margin: auto;
-
-    .banner-text{
+    .container {
       height: 100%;
-      flex-direction: column;
+      width: 100%;
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      align-items:flex-start;
 
-      h1 {
-        font-size: 80px;
-        border-bottom: 1px solid #333;
-        font-family: 'Chivo Mono', monospace;
-        font-weight: 900;
-        small {
-          display: block;
-          font-size: 53px;
+      .banner-text{
+        padding: 1rem;
+        margin: 1rem;
+        background: rgba(#7bf, 0.5);
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items:flex-start;
+        h1 {
+          font-size: 33px;
+          border-bottom: 1px solid #333;
+          font-family: 'Chivo Mono', monospace;
+          font-weight: 900;
+          small {
+            display: block;
+            font-size: 23px;
+          }
+        }
+  
+        h2 {
+          font-size: 33px;
+        }
+        p {
+          font-weight: 100;
+          font-size: 20px;
         }
       }
+  
+    }
+}
 
-      h2 {
-        font-size: 50px;
+@include min-w(768) {
+  .banner {
+    .container {
+      .banner-text {
+        display: block;
+        h1 {
+          font-size: 50px;
+        }
+        h2 {
+          font-size: 45px;
+        }
+
+        p {
+          font-size: 30px;
+        }
       }
-      p {
-        font-weight: 100;
-        font-size: 30px;
+    }
+  }
+}
+@include min-w(1024) {
+  .banner {
+    width: 100%;
+    height: 100vh;
+    background: 
+        linear-gradient(115deg, #7bf 50%, transparent 50%) center center / 100% 100%,
+        url("https://picsum.photos/1200/600?random=10") right center / auto 100%;
+  
+    .container {
+      height: 100%;
+      width: auto;
+      max-width: 1200px;
+      margin: auto;
+  
+      .banner-text{
+        height: 100%;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items:flex-start;
+        background: none;
+  
+        h1 {
+          font-size: 80px;
+          border-bottom: 1px solid #333;
+          font-family: 'Chivo Mono', monospace;
+          font-weight: 900;
+          small {
+            display: block;
+            font-size: 53px;
+          }
+        }
+  
+        h2 {
+          font-size: 50px;
+        }
+        p {
+          font-weight: 100;
+          font-size: 30px;
+        }
+        
       }
-      
     }
   }
 }

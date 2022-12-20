@@ -1,0 +1,6 @@
+@mixin min-w($width) {
+  @media (min-width: $width / 16 + em) {
+    @content;
+
+  }
+}
