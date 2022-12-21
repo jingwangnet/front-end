@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html, body {
+  height: 100vh;
+}
+
+.wrap {
+  background: linear-gradient(-30deg, #fdaecb, #e7597f, #fe8556);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+.container .item {
+  box-sizing: border-box;
+  display: flex;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(160, 0, 0, 0.5);
+}
+.container .item .pic {
+  width: 50%;
+}
+.container .item .pic img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  object-fit: cover;
+}
+.container .item .txt {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.container .item .txt h2 {
+  font-weight: 700;
+}
+.container .item .txt p {
+  font-weight: 300;
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+.container .item .txt a.btn {
+  margin-top: auto;
+  align-self: flex-end;
+  line-height: 1.5;
+  padding: 0 1rem;
+  border: 1px solid #ccc;
+  border-radius: 200px;
+  color: #aaa;
+}
+.container .item .txt a.btn:hover {
+  background-color: #ccc;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */
