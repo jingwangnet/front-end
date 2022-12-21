@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html, body {
+  height: 100vh;
+  padding: 100px 0;
+}
+
+body {
+  background: linear-gradient(20deg, #3d5493, #1aa2a0) fixed center center/100% 100%;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.wrap .item {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+  font-family: "Merriweather", serif;
+}
+.wrap .item:nth-child(even) .pic {
+  order: 2;
+}
+.wrap .item:nth-child(even) .txt {
+  order: 1;
+  margin-right: -10%;
+}
+.wrap .item:nth-child(odd) .pic {
+  margin-right: -10%;
+}
+.wrap .item .pic {
+  flex-shrink: 0;
+  width: 55%;
+}
+.wrap .item .pic img {
+  vertical-align: middle;
+  width: 100%;
+}
+.wrap .item .txt {
+  width: 55%;
+  flex-shrink: 0;
+  padding: 50px 30px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.wrap .item .txt h2 {
+  font-weight: 900;
+}
+.wrap .item .txt p {
+  font-weight: 100;
+  line-height: 1.6;
+}
+.wrap .item:nth-child(1) .txt {
+  background-color: rgba(240, 174, 193, 0.7);
+}
+.wrap .item:nth-child(2) .txt {
+  background-color: rgba(42, 253, 208, 0.7);
+}
+.wrap .item:nth-child(3) .txt {
+  background-color: rgba(254, 201, 121, 0.7);
+}
+.wrap .item:nth-child(4) .txt {
+  background-color: rgba(149, 219, 217, 0.7);
+}
+
+/*# sourceMappingURL=style.css.map */

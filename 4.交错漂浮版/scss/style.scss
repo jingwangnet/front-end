@@ -1,0 +1,84 @@
+@import 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,300&display=swap');
+
+html, body {
+  height: 100vh;
+  padding: 100px 0;
+}
+body {
+  background: linear-gradient(20deg, #3d5493, #1aa2a0) fixed center center / 100% 100%;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .item {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    font-family: 'Merriweather', serif;
+    &:nth-child(even) {
+      .pic {
+        order: 2;
+      }
+      .txt {
+        order: 1;
+        margin-right: -10%;
+      }
+    }
+
+    &:nth-child(odd) {
+      .pic {
+        margin-right: -10%;
+      }
+    }
+     
+    .pic {
+      img {
+        vertical-align: middle;
+        width: 100%;
+      }
+      flex-shrink: 0;
+      width: 55%;
+    }
+    .txt {
+      width: 55%;
+      flex-shrink: 0;
+      padding: 50px 30px;
+      box-sizing: border-box;
+      z-index: 1;
+      h2 {
+        font-weight: 900;
+      }
+      p {
+        font-weight: 100;
+        line-height: 1.6;
+      }
+    }
+
+    &:nth-child(1) {
+      .txt {
+        background-color: rgba(#f0aec1, .7);
+      }
+    }
+    &:nth-child(2) {
+      .txt {
+        background-color: rgba(#2afdd0, .7);
+      }
+    }
+    &:nth-child(3) {
+      .txt {
+        background-color: rgba(#fec979, .7);
+      }
+    }
+    &:nth-child(4) {
+      .txt {
+        background-color: rgba(#95dbd9, .7);
+      }
+    }
+  }
+}
+
+
