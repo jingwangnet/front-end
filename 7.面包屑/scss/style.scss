@@ -1,0 +1,38 @@
+@import 'reset';
+
+body {
+  background-color: #522870;
+}
+
+.wrap {
+  padding: 10px 0;
+  background-color: #ec008b;
+
+  ul.breadcrumb {
+    width: 90%;
+    margin: auto;
+    display: flex;
+
+    li {
+      padding: 0 20px;
+      & + li {
+        padding-left: 0;
+        &:before {
+          content: '>';
+          color: #fff;
+          font-weight: 900;
+          margin-right: 1em;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-family: sans-serif;
+      }
+      &:last-child  a, a:hover {
+          color: #ff0;
+      }
+    }
+  }
+}
+
