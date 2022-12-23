@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html, body {
+  height: 100vh;
+  font-family: "Noto Sans SC", sans-serif;
+}
+
+body {
+  background: url("https://picsum.photos/1200/760?random=10") fixed center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .login {
+  width: 600px;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  border: 10px solid #fff;
+  box-shadow: 0 0 60px #000;
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .login .form {
+  color: #fff;
+}
+body .login .form h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+body .login .form .group {
+  margin-bottom: 20px;
+}
+body .login .form .group label {
+  line-height: 3;
+}
+body .login .form .group input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  line-height: 3;
+  padding: 0 1em;
+  border: 5px;
+}
+body .login .form .group input:focus {
+  outline: none;
+}
+body .login .form .btn-group {
+  font-size: 0;
+  display: flex;
+  justify-content: space-between;
+}
+body .login .form .btn-group .btn {
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #6ab4fe;
+  width: 40%;
+  padding: 10px 0;
+}
+
+/*# sourceMappingURL=style.css.map */

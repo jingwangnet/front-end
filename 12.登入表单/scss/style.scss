@@ -1,0 +1,68 @@
+@import 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
+
+html, body {
+  height: 100vh;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+body {
+  background: url("https://picsum.photos/1200/760?random=10") fixed center center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .login {
+    width: 600px;
+    height: 400px;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 10px;
+    border: 10px solid #fff;
+    box-shadow: 0 0 60px #000;
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .form {
+      color: #fff;
+      h2 {
+        margin-bottom: 20px;
+        font-size: 30px;
+        text-align: center;
+      }
+      .group {
+        margin-bottom: 20px;
+        label {
+          line-height: 3;
+        }
+        input {
+          width: 100%;
+          box-sizing: border-box;
+          border: 1px solid #aaa;
+          border-radius: 5px;
+          line-height: 3;
+          padding: 0 1em;
+          border: 5px;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      .btn-group {
+        font-size: 0;
+        display: flex; 
+        justify-content: space-between; 
+        .btn {
+          font-size: 20px;
+          border-radius: 5px;
+          border: none;
+          background-color: #6ab4fe;
+          width: 40%;
+          padding: 10px 0;
+        }
+        
+      }
+      
+    }
+  }
+}
