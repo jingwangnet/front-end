@@ -5,6 +5,24 @@
   list-style: none;
 }
 
+h1 {
+  font-weight: 900;
+}
+
+h2 {
+  color: #333;
+  font-weight: 500;
+}
+
+p {
+  color: #666;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+}
+
 html, body {
   height: 100vh;
   font-family: "Noto Sans SC", sans-serif;
@@ -15,13 +33,10 @@ html .wrap, body .wrap {
   max-width: 960px;
   margin: 0 auto;
 }
-html .wrap h1, body .wrap h1 {
-  font-weight: 900;
-}
 html .wrap .timeline, body .wrap .timeline {
   padding: 100px 0;
   display: grid;
-  align-items: center;
+  align-items: end;
   grid-template-columns: auto auto;
 }
 html .wrap .timeline li, body .wrap .timeline li {
@@ -30,7 +45,6 @@ html .wrap .timeline li, body .wrap .timeline li {
   position: relative;
 }
 html .wrap .timeline li a, body .wrap .timeline li a {
-  text-decoration: none;
   display: block;
   background-color: #fff;
   border: 1px solid black;
@@ -48,8 +62,6 @@ html .wrap .timeline li a:hover h2:after, body .wrap .timeline li a:hover h2:aft
   width: 100%;
 }
 html .wrap .timeline li a h2, body .wrap .timeline li a h2 {
-  color: #333;
-  font-weight: 500;
   position: relative;
   margin-bottom: 10px;
 }
@@ -64,10 +76,6 @@ html .wrap .timeline li a h2:after, body .wrap .timeline li a h2:after {
   left: 0;
   transition: width 0.3s;
 }
-html .wrap .timeline li a p, body .wrap .timeline li a p {
-  color: #666;
-  font-weight: 300;
-}
 html .wrap .timeline li a p:before, body .wrap .timeline li a p:before {
   content: "";
   display: block;
@@ -77,12 +85,12 @@ html .wrap .timeline li a p:before, body .wrap .timeline li a p:before {
   margin: auto;
   height: 2px;
   width: 100px;
-  background: black;
+  background: #ccc;
 }
 html .wrap .timeline li:before, html .wrap .timeline li:after, body .wrap .timeline li:before, body .wrap .timeline li:after {
   content: "";
   position: absolute;
-  background: black;
+  background: #ccc;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -117,6 +125,12 @@ html .wrap .timeline li:nth-child(even):before, body .wrap .timeline li:nth-chil
   height: 10px;
   border-radius: 50%;
   left: -5px;
+}
+html .wrap .timeline li:nth-child(even):after, body .wrap .timeline li:nth-child(even):after {
+  width: 1px;
+  height: 100%;
+  left: -1px;
+  z-index: 1;
 }
 html .wrap .timeline li:nth-child(even) p:before, body .wrap .timeline li:nth-child(even) p:before {
   left: 0;

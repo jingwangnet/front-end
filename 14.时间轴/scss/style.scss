@@ -1,4 +1,6 @@
 @import 'reset';
+@import 'vars';
+@import 'tags';
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
 
 html, body {
@@ -12,14 +14,11 @@ html, body {
     max-width: 960px;
     margin: 0 auto;
 
-    h1 {
-      font-weight: 900;
-    }
     
     .timeline {
-      padding: 100px 0;
+      padding: $decoration-line-width 0;
       display: grid;
-      align-items: center;
+      align-items: end;
       grid-template-columns: auto auto;
       li {
         box-sizing: border-box;
@@ -27,7 +26,6 @@ html, body {
         position: relative;
         
         a {
-          text-decoration: none;
           display: block;
           background-color: #fff;
           border: 1px solid black;
@@ -46,8 +44,6 @@ html, body {
           }
 
           h2 {
-            color: #333;
-            font-weight: 500;
             position: relative;
             margin-bottom: 10px;
             
@@ -64,8 +60,6 @@ html, body {
             }
           }
           p {
-            color: #666;
-            font-weight: 300;
             &:before {
               content: '';
               display: block;
@@ -74,8 +68,8 @@ html, body {
               bottom: 0;
               margin: auto;
               height: 2px;
-              width: 100px;
-              background: black;
+              width: $decoration-line-width;
+              background: $decoration-color;
             }
           }
 
@@ -83,14 +77,14 @@ html, body {
          &:before, &:after {
              content: '';
              position: absolute;
-             background: black;
+             background: $decoration-color;
              top: 0;
              bottom: 0;
              margin: auto;
          }
 
          &:nth-child(odd) {
-           padding-right: 100px;
+           padding-right: $decoration-line-width;
            &:before {
              width: 1px;
              height: 100%;
@@ -110,7 +104,7 @@ html, body {
          
          }
          &:nth-child(even) {
-           padding-left: 100px;
+           padding-left: $decoration-line-width;
            transform: translateY(50%);
            &:before {
              width: 1px;
@@ -119,6 +113,12 @@ html, body {
              height: 10px;
              border-radius: 50%;
              left: -5px;
+           }
+           &:after {
+             width: 1px;
+             height: 100%;
+             left: -1px;
+             z-index: 1;
            }
            p:before {
              left: 0;
