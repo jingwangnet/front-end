@@ -18,10 +18,10 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .wrap .item {
-  width: 370px;
   margin: 15px;
   text-align: center;
   border: 1px solid black;
@@ -53,17 +53,22 @@ body {
 .wrap .item .txt h2, .wrap .item .txt p {
   transition: 0.25s;
 }
-.wrap .item .txt:before {
+.wrap .item .txt:before, .wrap .item .txt:after {
   content: "";
-  width: 0;
-  height: 0;
-  left: 0;
-  top: 0;
-  border-top: 50px solid transparent;
-  border-left: 184px solid #fff;
-  border-right: 184px solid #fff;
+  width: 100%;
+  height: 100%;
+  top: 1px;
   position: absolute;
   transform: translateY(-100%);
+  background: #fff;
+}
+.wrap .item .txt:before {
+  left: 0;
+  clip-path: polygon(0% 50%, 0% 100%, 50% 100%);
+}
+.wrap .item .txt:after {
+  right: 0;
+  clip-path: polygon(100% 50%, 100% 100%, 50% 100%);
 }
 .wrap .item:hover {
   transform: translateY(-50px);
@@ -71,9 +76,8 @@ body {
 .wrap .item:hover .txt {
   background-image: linear-gradient(0deg, #fe8076, #feb85d);
 }
-.wrap .item:hover .txt:before {
-  border-left: 184px solid #feb85d;
-  border-right: 184px solid #feb85d;
+.wrap .item:hover .txt:before, .wrap .item:hover .txt:after {
+  background: #feb85d;
 }
 .wrap .item:hover .txt h2, .wrap .item:hover .txt p {
   color: #fff;
