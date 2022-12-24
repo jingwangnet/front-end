@@ -1,0 +1,137 @@
+@import 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
+
+html, body {
+  height: 100vh;
+  font-family: 'Noto Sans SC', sans-serif;
+  background: #edece1;
+
+
+  .wrap {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+
+    h1 {
+      font-weight: 900;
+    }
+    
+    .timeline {
+      padding: 100px 0;
+      display: grid;
+      align-items: center;
+      grid-template-columns: auto auto;
+      li {
+        box-sizing: border-box;
+        padding: 20px 0;
+        position: relative;
+        
+        a {
+          text-decoration: none;
+          display: block;
+          background-color: #fff;
+          border: 1px solid black;
+          border-radius: 10px;
+          padding: 10px;
+          box-shadow: 3px 3px  5px #888;
+
+          &:hover {
+            background: #6fa5f6;
+            h2, p {
+              color: #fff;
+            }
+            h2:after {
+              width: 100%;
+            }
+          }
+
+          h2 {
+            color: #333;
+            font-weight: 500;
+            position: relative;
+            margin-bottom: 10px;
+            
+            &:after {
+              content: '';
+              display: block;
+              width: 0;
+              height: 2px;
+              position: absolute;
+              background: #fff;
+              bottom: -4px;
+              left: 0;
+              transition: width .3s;
+            }
+          }
+          p {
+            color: #666;
+            font-weight: 300;
+            &:before {
+              content: '';
+              display: block;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              margin: auto;
+              height: 2px;
+              width: 100px;
+              background: black;
+            }
+          }
+
+        }
+         &:before, &:after {
+             content: '';
+             position: absolute;
+             background: black;
+             top: 0;
+             bottom: 0;
+             margin: auto;
+         }
+
+         &:nth-child(odd) {
+           padding-right: 100px;
+           &:before {
+             width: 1px;
+             height: 100%;
+             width: 10px;
+             height: 10px;
+             border-radius: 50%;
+             right: -5px;
+           }
+           &:after {
+             width: 1px;
+             height: 100%;
+             right: 0;
+           }
+           p:before {
+             right: 0;
+           }
+         
+         }
+         &:nth-child(even) {
+           padding-left: 100px;
+           transform: translateY(50%);
+           &:before {
+             width: 1px;
+             height: 100%;
+             width: 10px;
+             height: 10px;
+             border-radius: 50%;
+             left: -5px;
+           }
+           p:before {
+             left: 0;
+           }
+         }
+         &:last-child { 
+           &:after {
+             height: 50%;
+             margin: 0;
+             top: 0;
+           }
+         }
+      }
+    }
+  }
+}

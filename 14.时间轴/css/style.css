@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html, body {
+  height: 100vh;
+  font-family: "Noto Sans SC", sans-serif;
+  background: #edece1;
+}
+html .wrap, body .wrap {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+html .wrap h1, body .wrap h1 {
+  font-weight: 900;
+}
+html .wrap .timeline, body .wrap .timeline {
+  padding: 100px 0;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto;
+}
+html .wrap .timeline li, body .wrap .timeline li {
+  box-sizing: border-box;
+  padding: 20px 0;
+  position: relative;
+}
+html .wrap .timeline li a, body .wrap .timeline li a {
+  text-decoration: none;
+  display: block;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 3px 3px 5px #888;
+}
+html .wrap .timeline li a:hover, body .wrap .timeline li a:hover {
+  background: #6fa5f6;
+}
+html .wrap .timeline li a:hover h2, html .wrap .timeline li a:hover p, body .wrap .timeline li a:hover h2, body .wrap .timeline li a:hover p {
+  color: #fff;
+}
+html .wrap .timeline li a:hover h2:after, body .wrap .timeline li a:hover h2:after {
+  width: 100%;
+}
+html .wrap .timeline li a h2, body .wrap .timeline li a h2 {
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 10px;
+}
+html .wrap .timeline li a h2:after, body .wrap .timeline li a h2:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  position: absolute;
+  background: #fff;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s;
+}
+html .wrap .timeline li a p, body .wrap .timeline li a p {
+  color: #666;
+  font-weight: 300;
+}
+html .wrap .timeline li a p:before, body .wrap .timeline li a p:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 2px;
+  width: 100px;
+  background: black;
+}
+html .wrap .timeline li:before, html .wrap .timeline li:after, body .wrap .timeline li:before, body .wrap .timeline li:after {
+  content: "";
+  position: absolute;
+  background: black;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+html .wrap .timeline li:nth-child(odd), body .wrap .timeline li:nth-child(odd) {
+  padding-right: 100px;
+}
+html .wrap .timeline li:nth-child(odd):before, body .wrap .timeline li:nth-child(odd):before {
+  width: 1px;
+  height: 100%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  right: -5px;
+}
+html .wrap .timeline li:nth-child(odd):after, body .wrap .timeline li:nth-child(odd):after {
+  width: 1px;
+  height: 100%;
+  right: 0;
+}
+html .wrap .timeline li:nth-child(odd) p:before, body .wrap .timeline li:nth-child(odd) p:before {
+  right: 0;
+}
+html .wrap .timeline li:nth-child(even), body .wrap .timeline li:nth-child(even) {
+  padding-left: 100px;
+  transform: translateY(50%);
+}
+html .wrap .timeline li:nth-child(even):before, body .wrap .timeline li:nth-child(even):before {
+  width: 1px;
+  height: 100%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: -5px;
+}
+html .wrap .timeline li:nth-child(even) p:before, body .wrap .timeline li:nth-child(even) p:before {
+  left: 0;
+}
+html .wrap .timeline li:last-child:after, body .wrap .timeline li:last-child:after {
+  height: 50%;
+  margin: 0;
+  top: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
