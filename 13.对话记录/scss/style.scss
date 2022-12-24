@@ -1,0 +1,87 @@
+@import 'reset';
+@import 'vars';
+
+html,body {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  align-items: center;
+}
+
+.dialogue {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 0 10px #3e92cc;
+  background: #eee;
+
+  .user {
+    display: flex;
+    align-items: flex-start;
+    figure {
+      display: block;
+      flex-shrink: 0;
+      img {
+        height: $img-height;
+        width: $img-width;
+        vertical-align: middle;
+        border-radius: 50%;
+      }
+      figcaption {
+        padding-top: 5px;
+        text-align: center;
+        font-size: 10px;
+      }
+    }
+    .txt {
+      padding: 1em;
+      border-radius: 10px;
+      line-height: 1.2;
+    }
+    & + .user {
+      margin-top: 1em;
+    }
+  }
+  .remote {
+    margin-right: $img-width;
+    .txt {
+      background: $remote-bg-color;
+      color: $remote-color;
+      margin: 0 1em;
+    }
+  }
+  .local {
+    margin-lefT: $img-width;
+    justify-content: flex-end;
+    .txt {
+      order: -1;
+      background: $local-bg-color;
+      color: $local-color;
+      margin: 0 1em;
+    }
+  }
+
+  .remote, .local {
+    .txt {
+      position: relative;
+    }
+  }
+  .remote .txt::before, .local .txt::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+  .local .txt::before {
+    border-left: 10px solid $local-bg-color;
+    right:-10px;
+  }
+  .remote .txt::before {
+    border-right: 10px solid $remote-bg-color;
+    left:-10px;
+  }
+}

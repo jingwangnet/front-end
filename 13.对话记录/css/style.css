@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  align-items: center;
+}
+
+.dialogue {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 0 10px #3e92cc;
+  background: #eee;
+}
+.dialogue .user {
+  display: flex;
+  align-items: flex-start;
+}
+.dialogue .user figure {
+  display: block;
+  flex-shrink: 0;
+}
+.dialogue .user figure img {
+  height: 40px;
+  width: 40px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+.dialogue .user figure figcaption {
+  padding-top: 5px;
+  text-align: center;
+  font-size: 10px;
+}
+.dialogue .user .txt {
+  padding: 1em;
+  border-radius: 10px;
+  line-height: 1.2;
+}
+.dialogue .user + .user {
+  margin-top: 1em;
+}
+.dialogue .remote {
+  margin-right: 40px;
+}
+.dialogue .remote .txt {
+  background: #fff;
+  color: #a1b4c5;
+  margin: 0 1em;
+}
+.dialogue .local {
+  margin-lefT: 40px;
+  justify-content: flex-end;
+}
+.dialogue .local .txt {
+  order: -1;
+  background: #3e92cc;
+  color: #fff;
+  margin: 0 1em;
+}
+.dialogue .remote .txt, .dialogue .local .txt {
+  position: relative;
+}
+.dialogue .remote .txt::before, .dialogue .local .txt::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.dialogue .local .txt::before {
+  border-left: 10px solid #3e92cc;
+  right: -10px;
+}
+.dialogue .remote .txt::before {
+  border-right: 10px solid #fff;
+  left: -10px;
+}
+
+/*# sourceMappingURL=style.css.map */
