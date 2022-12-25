@@ -17,7 +17,7 @@ ul {
   grid-template-columns: repeat(3, auto);
   justify-content: center;
   align-items: center;
-  grid-gap: 50px;
+  grid-gap: 25px;
 }
 ul li {
   width: 200px;
@@ -26,10 +26,10 @@ ul li {
   line-height: 200px;
   position: relative;
   font-size: 30px;
-  margin-top: -50px;
+  margin-top: -25px;
 }
 ul li:nth-child(n+4) {
-  left: 50%;
+  left: 55%;
 }
 ul li:nth-child(n+7) {
   left: 0;

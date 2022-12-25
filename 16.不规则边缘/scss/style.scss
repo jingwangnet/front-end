@@ -1,0 +1,70 @@
+@import 'reset';
+@import 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  font-family: 'Noto Sans SC', sans-serif;
+  .banner {
+    height: 50vh;
+    @media (orientation: landscape) {
+      height: 100vh;
+    }
+    @include min-w(768) {
+      height: 50vh;
+    }
+    @include min-w(1280) {
+      height: 700px;
+    }
+    background: url('https://picsum.photos/1080/700?random=10') center top / cover;
+  }
+
+  section {
+    .container {
+      width: 100%;
+      padding: 30px 0;
+      margin: 0 auto;
+      @include min-w(820) {
+        display: flex;
+      }
+      @include min-w(1280) {
+        max-width: 1200px;
+      }
+
+      .item {
+        margin: 30px;
+        h2 {
+          margin-bottom: 1.2em;
+        }
+        p { 
+          line-height: 1.6;
+        }
+      }
+    }
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top:  1px;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    transform: translateY(-100%);
+    background-image: url('/img/wave.svg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100%;
+    @include min-w(820) {
+      height: 300px;
+      background-size: 100% auto;
+    }
+    @include min-w(1280) {
+      height: 50vh;
+    }
+  }
+  }
+}
