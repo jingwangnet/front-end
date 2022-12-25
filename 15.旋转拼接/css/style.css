@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html, body {
+  height: 100vh;
+}
+
+ul {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 100px 0;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  align-items: center;
+  grid-gap: 50px;
+}
+ul li {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  line-height: 200px;
+  position: relative;
+  font-size: 30px;
+  margin-top: -50px;
+}
+ul li:nth-child(n+4) {
+  left: 50%;
+}
+ul li:nth-child(n+7) {
+  left: 0;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(45deg);
+  z-index: -1;
+  transition: background ease 3s;
+}
+ul li:hover {
+  color: #fff;
+  z-index: 2;
+}
+ul li:hover::before {
+  background: #000;
+}
+ul .box1::before {
+  background: #3ed0cd;
+}
+ul .box2::before {
+  background: #b2e086;
+}
+ul .box3::before {
+  background: #ef8899;
+}
+ul .box4::before {
+  background: #fc7b51;
+}
+ul .box5::before {
+  background: #2fccf9;
+}
+ul .box6::before {
+  background: #5f539b;
+}
+ul .box7::before {
+  background: #fce920;
+}
+ul .box8::before {
+  background: #7cc85c;
+}
+ul .box9::before {
+  background: #ffa55e;
+}
+
+/*# sourceMappingURL=style.css.map */
