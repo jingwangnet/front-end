@@ -15,6 +15,9 @@ body {
     }
     @include min-w(768) {
       height: 50vh;
+      @media (orientation: landscape) {
+        height: 100vh;
+      }
     }
     @include min-w(1280) {
       height: 700px;

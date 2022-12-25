@@ -26,6 +26,11 @@ body .banner {
     height: 50vh;
   }
 }
+@media (min-width: 48em) and (orientation: landscape) {
+  body .banner {
+    height: 100vh;
+  }
+}
 @media (min-width: 80em) {
   body .banner {
     height: 700px;
