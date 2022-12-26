@@ -11,7 +11,7 @@ article {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 300px 1fr; 
-  grid-template-rows: auto auto;
+  grid-template-rows: repeat(1fr, auto);
 
 
   h1, h2 {
@@ -22,8 +22,9 @@ article {
     font-size: 40px;
     display: flex;
     grid-area: 1 / 1 / 3 / 2;
-    padding: 5px;
     box-sizing: border-box;
+    padding: 10px;
+    margin: 0;
     /* 
       transform: rotate(90deg) translateY(-400px);
      */
@@ -56,7 +57,9 @@ article {
   }
   p  {
     line-height: 1.6em;
-    margin-bottom: 1em;
+    /* 
+      margin-bottom: 1em;
+     */
     font-family: sans-serif;
     column-count: 2;
     column-gap: 2em;
