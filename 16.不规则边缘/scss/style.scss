@@ -19,7 +19,7 @@ body {
         height: 100vh;
       }
     }
-    @include min-w(1280) {
+    @include min-w(1180) {
       height: 700px;
     }
     background: url('https://picsum.photos/1080/700?random=10') center top / cover;

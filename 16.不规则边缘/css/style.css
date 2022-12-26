@@ -31,7 +31,7 @@ body .banner {
     height: 100vh;
   }
 }
-@media (min-width: 80em) {
+@media (min-width: 73.75em) {
   body .banner {
     height: 700px;
   }
