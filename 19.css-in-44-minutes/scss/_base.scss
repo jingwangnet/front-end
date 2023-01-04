@@ -1,0 +1,13 @@
+@use 'sass:color';
+@import 'vars';
+
+html {
+  background-color: $primary-color;
+  background-image: linear-gradient(to bottom right, color.scale($primary-color, $lightness: 50%), color.scale($primary-color, $blackness: 50%));
+  color: #fff;
+  line-height: 1.5;
+  min-height: 100vh;
+  min-width: 300px;
+  overflow-x: hidden;
+}
+
