@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html, body {
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+body > article {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 3em;
+  display: flex;
+}
+body > article > header {
+  flex-shrink: 0;
+}
+body > article > header h1 {
+  writing-mode: vertical-rl;
+  font-size: 3rem;
+}
+body > article > p {
+  padding: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */

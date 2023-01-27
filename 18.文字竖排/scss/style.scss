@@ -1,0 +1,32 @@
+@import 'reset';
+
+html, body {
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+body {
+  >article {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding-top: 3em;
+    display: flex;
+
+    > header {
+      flex-shrink: 0;
+
+      h1 {
+        writing-mode:  vertical-rl;
+        font-size: 3rem;
+      }
+    }
+
+    > p {
+      padding: 1rem;
+    }
+
+
+  }
+}
+
