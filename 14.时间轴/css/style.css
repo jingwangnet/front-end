@@ -75,6 +75,7 @@ html .wrap .timeline, body .wrap .timeline {
   display: grid;
   align-items: end;
   grid-template-columns: auto auto;
+  gap: 1px;
 }
 html .wrap .timeline li, body .wrap .timeline li {
   box-sizing: border-box;
@@ -130,7 +131,7 @@ html .wrap .timeline li:nth-child(even):before, body .wrap .timeline li:nth-chil
   left: -5px;
 }
 html .wrap .timeline li:nth-child(even):after, body .wrap .timeline li:nth-child(even):after {
-  left: 0;
+  left: -1px;
 }
 html .wrap .timeline li:nth-child(even) p:before, body .wrap .timeline li:nth-child(even) p:before {
   left: 0;

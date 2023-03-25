@@ -23,6 +23,8 @@ html, body {
       align-items: end;
       // 两栏以最下对齐
       grid-template-columns: auto auto;
+      // gap 1px 用于放中间的 修饰线
+      gap: 1px;
       li {
         box-sizing: border-box;
         padding: 20px 0;
@@ -96,7 +98,7 @@ html, body {
            }
            &:after {
              @extend %decoration-vertical-line;
-             left: 0;
+             left: -1px;
            }
            p:before {
              left: 0;
