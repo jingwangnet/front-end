@@ -1,6 +1,7 @@
 @import 'reset';
 @import 'vars';
 @import 'tags';
+@import 'components';
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
 
 html, body {
@@ -17,13 +18,16 @@ html, body {
     
     .timeline {
       padding: $decoration-line-width 0;
+      // 两栏布局
       display: grid;
       align-items: end;
+      // 两栏以最下对齐
       grid-template-columns: auto auto;
       li {
         box-sizing: border-box;
         padding: 20px 0;
         position: relative;
+        // relative 给子元素定位
         
         a {
           display: block;
@@ -48,32 +52,17 @@ html, body {
             margin-bottom: 10px;
             
             &:after {
-              content: '';
-              display: block;
-              width: 0;
-              height: 2px;
-              position: absolute;
-              background: #fff;
-              bottom: -4px;
-              left: 0;
-              transition: width .3s;
+              @extend %h2-hover;
             }
           }
           p {
             &:before {
-              content: '';
-              display: block;
-              position: absolute;
-              top: 0;
-              bottom: 0;
-              margin: auto;
-              height: 2px;
-              width: $decoration-line-width;
-              background: $decoration-color;
+              @extend %decoration-vertical-line;
             }
           }
 
         }
+         // li 中线 修饰 定位 
          &:before, &:after {
              content: '';
              position: absolute;
@@ -86,17 +75,12 @@ html, body {
          &:nth-child(odd) {
            padding-right: $decoration-line-width;
            &:before {
-             width: 1px;
-             height: 100%;
-             width: 10px;
-             height: 10px;
-             border-radius: 50%;
+             @extend %decoration-ball;
              right: -5px;
            }
            &:after {
-             width: 1px;
-             height: 100%;
-             right: 0;
+             @extend %decoration-horizontal-line;
+             right: -1px;
            }
            p:before {
              right: 0;
@@ -107,16 +91,11 @@ html, body {
            padding-left: $decoration-line-width;
            transform: translateY(50%);
            &:before {
-             width: 1px;
-             height: 100%;
-             width: 10px;
-             height: 10px;
-             border-radius: 50%;
+             @extend %decoration-ball;
              left: -5px;
            }
            &:after {
-             width: 1px;
-             height: 100%;
+             @extend %decoration-horizontal-line;
              left: -1px;
              z-index: 1;
            }
@@ -126,6 +105,7 @@ html, body {
          }
          &:last-child { 
            &:after {
+             // 最后一个 只需 一半
              height: 50%;
              margin: 0;
              top: 0;
