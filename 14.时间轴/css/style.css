@@ -130,8 +130,7 @@ html .wrap .timeline li:nth-child(even):before, body .wrap .timeline li:nth-chil
   left: -5px;
 }
 html .wrap .timeline li:nth-child(even):after, body .wrap .timeline li:nth-child(even):after {
-  left: -1px;
-  z-index: 1;
+  left: 0;
 }
 html .wrap .timeline li:nth-child(even) p:before, body .wrap .timeline li:nth-child(even) p:before {
   left: 0;

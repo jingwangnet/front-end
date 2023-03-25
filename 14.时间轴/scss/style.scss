@@ -57,7 +57,7 @@ html, body {
           }
           p {
             &:before {
-              @extend %decoration-vertical-line;
+              @extend %decoration-horizontal-line;
             }
           }
 
@@ -79,7 +79,7 @@ html, body {
              right: -5px;
            }
            &:after {
-             @extend %decoration-horizontal-line;
+             @extend %decoration-vertical-line;
              right: -1px;
            }
            p:before {
@@ -95,9 +95,8 @@ html, body {
              left: -5px;
            }
            &:after {
-             @extend %decoration-horizontal-line;
-             left: -1px;
-             z-index: 1;
+             @extend %decoration-vertical-line;
+             left: 0;
            }
            p:before {
              left: 0;

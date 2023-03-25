@@ -11,7 +11,7 @@
   transition: width .3s;
 }
 
-%decoration-vertical-line {
+%decoration-horizontal-line {
   content: '';
   display: block;
   position: absolute;
@@ -30,7 +30,7 @@
   height: 10px;
   border-radius: 50%;
 }
-%decoration-horizontal-line {
+%decoration-vertical-line {
   width: 1px;
   height: 100%;
 }
