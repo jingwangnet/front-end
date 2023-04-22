@@ -1,0 +1,115 @@
+@import 'vars';
+@import 'extends';
+@import 'mixins';
+.logo {
+  display: flex;
+  align-items: center;
+  
+  i {
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 3px;
+  }
+  span {
+    color: var(--text-color);
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+  span.bold {
+    color: var(--main-color);
+  }
+}
+
+
+.navbar {
+  display: flex;
+  @extend %transition;
+  a {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    padding: 5px 0;
+    margin: 0px 30px;
+    @extend %transition;
+    &:hover, &.active {
+      color: var(--main-color);
+    }
+
+    @include max-width(1280) { 
+      margin:  0 20px;
+    }
+  }
+}
+@include max-width(1090) {
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--main-color);
+    width:  270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+
+    a {
+      display: block;
+      margin: 12px 0;
+      padding: 0 25px;
+
+      &:hover, &.active {
+        color: var(--text-color);
+      }
+      &:hover {
+        transform: translateY(5px);
+      }
+    }
+  }
+  .open {
+    right: var(--padding-x);
+  }
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  a {
+    margin-right: 25px;
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    @extend %transition;
+    &:hover {
+      color: var(--main-color);
+    }
+    @include max-width(1280) { 
+      margin-left: 0;
+      margin-right: 20px;
+    }
+  }
+
+
+  .user {
+    display: flex;
+    align-items: center;
+    i {
+      color: var(--main-color);
+      font-size: 28px;
+      margin-right: 7px;
+    }
+  }
+
+}
+
+#menu-icon {
+  font-size: 35px;
+  color: var(--text-color);
+  cursor: pointer;
+  z-index: 1001;
+  display: none;
+  @include max-width(1090) {
+    display: block;
+  }
+}
