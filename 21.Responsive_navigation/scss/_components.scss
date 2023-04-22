@@ -7,12 +7,12 @@
   
   i {
     color: var(--main-color);
-    font-size: 28px;
+    font-size: var(--font-size-nav-i);
     margin-right: 3px;
   }
   span {
     color: var(--text-color);
-    font-size: 1.7rem;
+    font-size: var(--font-size-nav);
     font-weight: 600;
   }
 }
@@ -93,7 +93,7 @@
     align-items: center;
     i {
       color: var(--main-color);
-      font-size: 28px;
+      font-size: var(--font-size-nav-i);
       margin-right: 7px;
     }
   }
@@ -101,7 +101,7 @@
 }
 
 #menu-icon {
-  font-size: 35px;
+  font-size: var(--font-size-nav-big);
   color: var(--text-color);
   cursor: pointer;
   z-index: 1001;

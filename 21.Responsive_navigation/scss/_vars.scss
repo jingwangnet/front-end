@@ -1,3 +1,4 @@
+@import 'mixins';
 :root {
   --bg-color: #222327;
   --text-color: #fff;
@@ -5,7 +6,25 @@
 
   --padding-y: 28px;
   --padding-x: 12%;
+
+  --font-size-nav-i: 28px;
+  --font-size-nav: 1.7rem;
+  --font-size-nav-big: 2rem;
 }
 
 
 
+@include max-width(1280) {
+  :root {
+    --padding-y: 14px;
+    --padding-x: 2%;
+  }
+}
+
+@include max-width(600) {
+  :root {
+    --font-size-nav-i: 20px;
+    --font-size-nav: 1.2rem;
+    --font-size-nav-big: 1.5rem;
+  }
+}

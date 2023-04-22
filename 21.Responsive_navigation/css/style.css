@@ -17,8 +17,24 @@
   --main-color: #23fd53;
   --padding-y: 28px;
   --padding-x: 12%;
+  --font-size-nav-i: 28px;
+  --font-size-nav: 1.7rem;
+  --font-size-nav-big: 2rem;
 }
 
+@media (max-width: 80em) {
+  :root {
+    --padding-y: 14px;
+    --padding-x: 2%;
+  }
+}
+@media (max-width: 37.5em) {
+  :root {
+    --font-size-nav-i: 20px;
+    --font-size-nav: 1.2rem;
+    --font-size-nav-big: 1.5rem;
+  }
+}
 body header, .main a, .navbar a, .navbar {
   transition: all 0.5s ease;
 }
@@ -29,8 +45,24 @@ body header, .main a, .navbar a, .navbar {
   --main-color: #23fd53;
   --padding-y: 28px;
   --padding-x: 12%;
+  --font-size-nav-i: 28px;
+  --font-size-nav: 1.7rem;
+  --font-size-nav-big: 2rem;
 }
 
+@media (max-width: 80em) {
+  :root {
+    --padding-y: 14px;
+    --padding-x: 2%;
+  }
+}
+@media (max-width: 37.5em) {
+  :root {
+    --font-size-nav-i: 20px;
+    --font-size-nav: 1.2rem;
+    --font-size-nav-big: 1.5rem;
+  }
+}
 body header, .main a, .navbar a, .navbar {
   transition: all 0.5s ease;
 }
@@ -41,12 +73,12 @@ body header, .main a, .navbar a, .navbar {
 }
 .logo i {
   color: var(--main-color);
-  font-size: 28px;
+  font-size: var(--font-size-nav-i);
   margin-right: 3px;
 }
 .logo span {
   color: var(--text-color);
-  font-size: 1.7rem;
+  font-size: var(--font-size-nav);
   font-weight: 600;
 }
 
@@ -122,12 +154,12 @@ body header, .main a, .navbar a, .navbar {
 }
 .main .user i {
   color: var(--main-color);
-  font-size: 28px;
+  font-size: var(--font-size-nav-i);
   margin-right: 7px;
 }
 
 #menu-icon {
-  font-size: 35px;
+  font-size: var(--font-size-nav-big);
   color: var(--text-color);
   cursor: pointer;
   z-index: 1001;
@@ -155,13 +187,6 @@ body header {
   justify-content: space-between;
   background-color: transparent;
   padding: var(--padding-y) var(--padding-x);
-}
-
-@media (max-width: 80em) {
-  :root {
-    --padding-y: 14px;
-    --padding-x: 2%;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
