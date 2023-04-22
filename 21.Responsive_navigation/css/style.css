@@ -49,9 +49,6 @@ body header, .main a, .navbar a, .navbar {
   font-size: 1.7rem;
   font-weight: 600;
 }
-.logo span.bold {
-  color: var(--main-color);
-}
 
 .navbar {
   display: flex;
